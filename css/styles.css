@@ -115,7 +115,9 @@ header h1 {
     display: inline-block;
     transition: transform 0.3s ease;
 }
-
+.boton:hover{
+    background-color: #4ba1b0;
+}
 /* Agranda el botón en dispositivos móviles */
 @media (max-width: 768px) {
     .boton {
@@ -185,6 +187,9 @@ header h1 {
     font-size: 1.6rem;
     margin-right: 20px;
 }
+#sticky-banner .boton:hover{
+    background-color: #4ba1b0;
+    }
 
 #sticky-banner #close-banner {
     align-self: flex-end; /* Coloca el botón de cierre en la parte superior derecha */
@@ -224,6 +229,7 @@ header h1 {
         margin: auto;
         text-align: center;
     }
+
 
     #sticky-banner #close-banner {
         font-size: 1.2rem;
@@ -364,9 +370,18 @@ header h1 {
 }
 
 .precio-nuevo {
-    color: var(--primario);
-    font-size: 2.4rem;
+    color:var(--primario);
+    font-size: 5rem;
     font-weight: bold;
+    margin-right: 10rem;
+}
+@media (min-width: 480px) {
+ .precio-nuevo{
+    font-size: 3rem;
+ }
+ .precio-antiguo{
+    font-size: 1.5rem;
+ }
 }
 
 .plan ul {
@@ -384,12 +399,18 @@ header h1 {
 }
 
 .boton-comprar {
-    background-color: var(--botones);
+    background-color: var(--neutro);
     color: var(--blanco);
     padding: 1rem 2rem;
     text-decoration: none;
     border-radius: .5rem;
     font-size: 1.6rem;
+    text-transform: uppercase;
+}
+.boton-comprar:hover{
+    color: var(--blanco);
+    background-color:#161616 ;
+   
 }
 
 @media (min-width: 768px) {
@@ -397,6 +418,91 @@ header h1 {
         max-width: 50rem;
         margin: 0 auto;
     }
+}
+
+
+
+/* PARTE DE TESTIMONIOS */
+.testimonios {
+    padding: 4rem 0;
+    background-color: var(--fondo);
+    text-align: center;
+}
+
+.testimonios-slider {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.testimonio {
+    display: none; /* Oculta todos los testimonios por defecto */
+    padding: 2rem;
+    background-color: var(--blanco);
+    color: var(--negro);
+    border-radius: .5rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.testimonio.active {
+    display: block; /* Muestra solo el testimonio activo */
+}
+
+.testimonio-img {
+    max-width: 20rem; /* Tamaño máximo para las imágenes */
+    border-radius: 5%;
+    margin-bottom: 1rem;
+}
+
+/* compra mas grande*/
+.boton-comprar2 {
+    background-color: var(--botones);
+    color: var(--blanco);
+    padding: 1rem 2rem;
+    text-decoration: none;
+    border-radius: .5rem;
+    font-size: 4rem;
+    text-transform: uppercase;
+}
+.boton-comprar2:hover{
+    color: var(--blanco);
+    background-color:#161616 ;
+   
+}
+
+button {
+    background-color: var(--primario);
+    color: var(--blanco);
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1.6rem;
+    border-radius: .5rem;
+    cursor: pointer;
+    margin: 1rem;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+button {
+    background-color: var(--primario);
+    color: var(--blanco);
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1.6rem;
+    border-radius: .5rem;
+    cursor: pointer;
+    margin: 1rem;
+}
+
+button:hover {
+    background-color: #0056b3;
 }
 
 /* PARTE DE GARANTIA*/
