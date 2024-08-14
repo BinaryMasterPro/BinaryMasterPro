@@ -283,7 +283,14 @@ header h1 {
     text-align: center;
     text-transform: uppercase;
 }
-
+@media (max-width: 480px) {
+    .modulos h2 { 
+        font-size: 2rem;
+        margin-bottom: 2rem;
+        text-align: center;
+        text-transform: uppercase;
+    }
+}
 .modulos-grid {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
@@ -301,7 +308,14 @@ header h1 {
     transition: all 0.3s ease;
     align-items: center;
 }
-
+@media (max-width: 480px) {
+ .modulos-grid .modulo h3{
+    font-size: 1.5rem;
+ }
+ .modulos-grid .contenido-modulo.visible ul{
+    font-size: 1.3rem;
+ }
+}
 .modulo h3 {
     font-size: 2rem;
     margin-bottom: 1rem;
@@ -359,7 +373,7 @@ header h1 {
 }
 
 .precio {
-    font-size: 2rem;
+    font-size: 1rem;
     margin-bottom: 2rem;
 }
 
@@ -371,13 +385,13 @@ header h1 {
 
 .precio-nuevo {
     color:var(--primario);
-    font-size: 5rem;
+    font-size: 2.5rem;
     font-weight: bold;
-    margin-right: 10rem;
+    margin-right: 5rem;
 }
 @media (min-width: 480px) {
  .precio-nuevo{
-    font-size: 3rem;
+    font-size: 4rem;
  }
  .precio-antiguo{
     font-size: 1.5rem;
@@ -412,11 +426,17 @@ header h1 {
     background-color:#161616 ;
    
 }
+.compra .contenedor h2{
+    font-size: 1.5rem;
+}
 
-@media (min-width: 768px) {
+@media (min-width: 480px) {
     .plan {
         max-width: 50rem;
         margin: 0 auto;
+    }
+    .compra .contenedor h2{
+        font-size: 4rem;
     }
 }
 
@@ -466,8 +486,13 @@ header h1 {
     padding: 1rem 2rem;
     text-decoration: none;
     border-radius: .5rem;
-    font-size: 4rem;
+    font-size: 2rem;
     text-transform: uppercase;
+}
+@media (min-width: 480px) {
+   .boton-comprar2 {
+    font-size: 4rem;
+   }
 }
 .boton-comprar2:hover{
     color: var(--blanco);
