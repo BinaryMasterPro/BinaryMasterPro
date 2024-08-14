@@ -37,3 +37,25 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 500);
     });
 });
+document.addEventListener('DOMContentLoaded', function() {
+    const testimonios = document.querySelectorAll('.testimonio');
+    let index = 0;
+
+    function showSlide(i) {
+        testimonios.forEach((testimonio, idx) => {
+            testimonio.classList.toggle('active', idx === i);
+        });
+    }
+
+    showSlide(index);
+
+    document.getElementById('next').addEventListener('click', function() {
+        index = (index + 1) % testimonios.length;
+        showSlide(index);
+    });
+
+    document.getElementById('prev').addEventListener('click', function() {
+        index = (index - 1 + testimonios.length) % testimonios.length;
+        showSlide(index);
+    });
+});
