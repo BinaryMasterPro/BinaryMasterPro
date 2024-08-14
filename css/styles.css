@@ -1,0 +1,434 @@
+:root {
+    --blanco: #ffffff;
+    --negro: #000000;
+    --primario: #007bff;
+    --secundario: #6c757d;
+    --fondo: #f8f9fa;
+    --botones: #007bff;
+    --neutro: #343a40;
+}
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-size: 1.6rem;
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--fondo);
+    color: var(--negro);
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #f0f0f0, #d0d0d0, #4ba1b0);
+}
+
+header {
+    background-color: var(--negro);
+    color: var(--blanco);
+    padding: 2rem 0;
+    text-align: center;
+    position: fixed; /* Hace que el encabezado esté fijo */
+    top: 0; /* Posición fija en la parte superior */
+    left: 0; /* Alineado al borde izquierdo */
+    width: 100%; /* Ocupa el ancho completo */
+    z-index: 1000; /* Asegura que esté por encima de otros elementos */
+    /* Puedes añadir sombra si lo deseas */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header-content {
+    display: flex;
+    justify-content: center; /* Alinea el contenido al centro */
+    align-items: center;
+    width: 100%; /* Asegura que el contenedor ocupe todo el ancho del header */
+    text-decoration: none;
+    color: var(--blanco)
+}
+.header-content a {
+    color: var(--blanco); /* Establece el color del texto del enlace */
+    text-decoration: none; /* Elimina el subrayado del enlace */
+}
+.header-content a:hover {
+    color: var(--primario); /* Establece el color del texto del enlace */
+    text-decoration: none; /* Elimina el subrayado del enlace */
+}
+header h1 {
+    font-size: 3rem;
+    margin: 0;
+    font-weight: 600;
+    text-align: center; 
+   
+}
+
+.navegacion-principal a {
+    color: var(--blanco);
+    text-decoration: none;
+    margin-left: 2rem;
+    font-weight: 400;
+    font-size: 1.6rem;
+}
+
+.navegacion-principal a:hover {
+    color: var(--primario);
+}
+
+.hero {
+    background-image: url('../img/FONDOWEB.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 80rem;
+    display: flex;
+    align-items: center;
+    color: var(--blanco);
+}
+
+.hero-content {
+    text-align: center;
+    max-width: 60rem;
+    margin: 0 auto;
+    color: var(--blanco)
+    
+}
+
+.hero h2 {
+    font-size: 5rem;
+    margin-bottom: 2rem;
+}
+
+.hero p {
+    font-size: 1.8rem;
+    margin-bottom: 3rem;
+}
+
+.boton {
+    background-color: var(--botones);
+    color: var(--blanco);
+    padding: 1rem 2rem;
+    text-decoration: none;
+    border-radius: .5rem;
+    font-size: 1.6rem;
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+/* Agranda el botón en dispositivos móviles */
+@media (max-width: 768px) {
+    .boton {
+        padding: 1.5rem 3rem;
+        font-size: 1.8rem;
+        width: 90%;
+        transform: scale(1.1); /* Aumenta el tamaño en móviles */
+    }
+}
+.intro-curso i.fas.fa-check {
+    color: #007bff; /* Cambia esto al color que prefieras */
+    margin-right: 10px; /* Espacio entre el ícono y el texto */
+    font-size: 1.2rem; /* Tamañ
+    o del ícono */
+}
+.intro-curso .contenedor {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.intro-curso ul {
+    list-style-type: none; /* Elimina cualquier marcador de lista predeterminado */
+    padding-left: 0;
+    margin-bottom: 2rem;
+}
+
+.intro-curso ul li {
+    font-size: 1.8rem;
+    margin-bottom: 1.2rem;
+    display: flex;
+    align-items: center;
+}
+
+#sticky-banner {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #343a40;
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: opacity 0.5s ease-in-out, bottom 0.5s ease-in-out;
+    opacity: 0;
+    white-space: nowrap;
+    width: auto;
+    max-width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000; /* Asegúrate de que esté por encima de otros elementos */
+}
+
+#sticky-banner p {
+    margin: 0;
+    padding-right: 20px;
+}
+
+#sticky-banner .boton {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.6rem;
+    margin-right: 20px;
+}
+
+#sticky-banner #close-banner {
+    align-self: flex-end; /* Coloca el botón de cierre en la parte superior derecha */
+    cursor: pointer;
+    font-size: 2rem; /* Tamaño del ícono */
+    margin-bottom: 10px; /* Espacio entre el ícono y el contenido del banner */
+    position: absolute; /* Posiciona el botón de cierre absolutamente en relación al banner */
+    top: 10px;
+    right: 10px;
+    z-index: 1100; /* Asegúrate de que el botón esté por encima del contenido del banner */
+}
+/* Estilo para dispositivos móviles */
+@media (max-width: 768px) {
+    #sticky-banner {
+        font-size: 1.4rem; /* Tamaño de fuente más pequeño en móviles */
+        padding: 10px;
+        width: 90%; /* Asegura que el banner no sea más ancho que el 90% de la pantalla */
+        left: 5%; /* Ajusta el banner a los bordes */
+        transform: translateX(0); /* Ajusta el banner para que esté alineado con el borde izquierdo */
+        bottom: 10px; /* Ajusta la posición inferior del banner en dispositivos móviles */
+        flex-direction: column; /* Cambia la dirección a columna para móviles */
+        align-items: center; /* Centra el contenido en la columna */
+        justify-content: center;
+    }
+
+    #sticky-banner p {
+        font-size: 1.2rem; /* Tamaño de fuente más pequeño para el texto en móviles */
+        padding-right: 0; /* Elimina el espaciado a la derecha del texto */
+        margin-bottom: 10px; /* Añade un margen inferior para separar el texto del botón */
+        text-align: center   ;
+    }
+    
+
+    #sticky-banner .boton {
+        font-size: 1.2rem; /* Tamaño de fuente más pequeño para el botón en móviles */
+        padding: 8px 16px; /* Espaciado reducido en el botón */
+        margin: auto;
+        text-align: center;
+    }
+
+    #sticky-banner #close-banner {
+        font-size: 1.2rem;
+        top: 5px;
+        right: 5px;
+    }
+}
+.servicios {
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.servicios h2 {
+    font-size: 3rem;
+    margin-bottom: 3rem;
+}
+
+.servicios-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.servicio {
+    background-color: var(--blanco);
+    padding: 3rem;
+    border-radius: .5rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.servicio h3 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    
+}
+
+.servicio p {
+    font-size: 1.6rem;
+    color: var(--secundario);
+}
+
+.modulos {
+    padding: 4rem 0;
+    background-color: var(--neutro);
+    color: var(--blanco);
+}
+
+.modulos h2 { /* TEMAS DEL CURSO */
+    font-size: 6rem;
+    margin-bottom: 3rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.modulos-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2rem;
+}
+
+.modulo {
+    background-color: var(--blanco);
+    color: var(--negro);
+    padding: 2rem;
+    border-radius: .5rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    position: relative;
+    transition: all 0.3s ease;
+    align-items: center;
+}
+
+.modulo h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.contenido-modulo {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.contenido-modulo.visible {
+    padding-top: 1rem;
+    max-height: 500px; /* Ajusta esto según el contenido */
+}
+
+.modulo.active .contenido-modulo {
+    display: block;
+}
+
+.modulo ul {
+    list-style: none;
+    padding: 0;
+}
+
+.modulo li {
+    background-color: var(--primario);
+    color: var(--blanco);
+    padding: 1rem;
+    margin-bottom: .5rem;
+    border-radius: .5rem;
+}
+/* Estilos para la nueva sección de compras */
+.compra {
+    padding: 4rem 0;
+    background-color: var(--fondo);
+    text-align: center;
+}
+
+.plan {
+    background-color: var(--blanco);
+    color: var(--negro);
+    padding: 3rem;
+    border-radius: .5rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+}
+
+.plan h3 {
+    font-size: 2.4rem;
+    margin-bottom: 1.5rem;
+}
+
+.precio {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.precio-antiguo {
+    text-decoration: line-through;
+    color: var(--secundario);
+    margin-right: 1rem;
+}
+
+.precio-nuevo {
+    color: var(--primario);
+    font-size: 2.4rem;
+    font-weight: bold;
+}
+
+.plan ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 2rem 0;
+}
+
+.plan li {
+    background-color: var(--primario);
+    color: var(--blanco);
+    padding: 1rem;
+    margin-bottom: .5rem;
+    border-radius: .5rem;
+}
+
+.boton-comprar {
+    background-color: var(--botones);
+    color: var(--blanco);
+    padding: 1rem 2rem;
+    text-decoration: none;
+    border-radius: .5rem;
+    font-size: 1.6rem;
+}
+
+@media (min-width: 768px) {
+    .plan {
+        max-width: 50rem;
+        margin: 0 auto;
+    }
+}
+
+/* PARTE DE GARANTIA*/
+.garantia {
+    padding: 4rem 0;
+    background-color: var(--fondo);
+    text-align: center;
+    color: var(--negro);
+}
+
+.garantia h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.garantia-img {
+    max-width: 50%;
+    height: auto;
+    margin-top: 2rem;
+    opacity: 0.8; /* Ajusta la transparencia de la imagen */
+}
+
+@media (min-width: 768px) {
+.garantia-img {
+    max-width: 10%;
+}
+}
+
+
+
+
+
+.footer{
+    text-align: center;
+}
